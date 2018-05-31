@@ -30,6 +30,7 @@ func constdata() {
 	fmt.Println(eof)
 	fmt.Println(u, v, a, b, c, c0, c1, mask)
 	fmt.Println("func constdata end!")
+
 }
 
 func declare() {

@@ -114,6 +114,7 @@ func map_go() {
 	delete(personDB, "1")
 
 	fmt.Println(personDB["22"])
+	
 
 }
 
