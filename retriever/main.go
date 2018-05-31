@@ -5,8 +5,8 @@ import (
 
 	"time"
 
-	"imooc.com/ccmouse/learngo/retriever/mock"
-	"imooc.com/ccmouse/learngo/retriever/real"
+	"Golearn-Practice/retriever/mock"
+	"Golearn-Practice/retriever/real"
 )
 
 type Retriever interface {
@@ -68,6 +68,7 @@ func main() {
 	fmt.Println(
 		"Try a session with mockRetriever")
 	fmt.Println(session(&mockRetriever))
+
 }
 
 func inspect(r Retriever) {
