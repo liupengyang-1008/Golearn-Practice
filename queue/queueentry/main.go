@@ -1,8 +1,8 @@
 package main
 
 import (
+	"Golearn-Practice/queue"
 	"fmt"
-	"imooc.com/ccmouse/learngo/queue"
 )
 
 func main() {
@@ -10,9 +10,9 @@ func main() {
 
 	q.Push(2)
 	q.Push(3)
-	fmt.Println(q.Pop())
-	fmt.Println(q.Pop())
-	fmt.Println(q.IsEmpty())
-	fmt.Println(q.Pop())
-	fmt.Println(q.IsEmpty())
+	fmt.Println(q, &q, q.Pop())
+	fmt.Println(q, &q, q.Pop())
+	fmt.Println(q, &q, q.IsEmpty())
+	fmt.Println(q, &q, q.Pop())
+	fmt.Println(q, &q, q.IsEmpty())
 }

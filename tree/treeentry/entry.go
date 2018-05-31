@@ -9,6 +9,8 @@ type myTreeNode struct {
 	node *tree.Node
 }
 
+
+//后序遍历
 func (myNode *myTreeNode) postOrder() {
 	if myNode == nil || myNode.node == nil {
 		return
