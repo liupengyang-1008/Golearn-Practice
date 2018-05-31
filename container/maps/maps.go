@@ -13,6 +13,15 @@ func main() {
 	m2 := make(map[string]int) // m2 == empty map
 
 	var m3 map[string]int // m3 == nil
+	for i, v := range m2 {
+		fmt.Println(i, v)
+	}
+	if m2 == nil {
+		fmt.Println("ok2", m2)
+	}
+	if m3 == nil {
+		fmt.Println("ok3")
+	}
 
 	fmt.Println("m, m2, m3:")
 	fmt.Println(m, m2, m3)
