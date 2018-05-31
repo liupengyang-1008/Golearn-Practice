@@ -27,4 +27,5 @@ func main() {
 
 	fmt.Println("arr1 and arr3")
 	fmt.Println(arr1, arr3)
+
 }
