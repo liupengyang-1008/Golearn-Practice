@@ -1,9 +1,8 @@
 package main
 
 import (
+	"Golearn-Practice/tree"
 	"fmt"
-
-	"imooc.com/ccmouse/learngo/tree"
 )
 
 type myTreeNode struct {
