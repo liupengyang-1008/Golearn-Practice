@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+//闭包
 func adder() func(int) int {
 	sum := 0
 	return func(v int) int {
@@ -10,6 +11,7 @@ func adder() func(int) int {
 	}
 }
 
+//正统函数式编程
 type iAdder func(int) (int, iAdder)
 
 func adder2(base int) iAdder {
@@ -19,6 +21,14 @@ func adder2(base int) iAdder {
 }
 
 func main() {
+
+	b := adder()
+	for i := 0; i < 10; i++ {
+		fmt.Printf("0 + 1 + ... + %d = %d\n",
+			i, b(i))
+	}
+
+	fmt.Println("------------------------")
 	// a := adder() is trivial and also works.
 	a := adder2(0)
 	for i := 0; i < 10; i++ {

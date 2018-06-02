@@ -1,12 +1,11 @@
 package main
 
 import (
+	"Golearn-Practice/functional/fib"
 	"bufio"
 	"fmt"
 	"io"
 	"strings"
-
-	"imooc.com/ccmouse/learngo/functional/fib"
 )
 
 type intGen func() int
