@@ -14,5 +14,5 @@ func main() {
 			}
 		}(i)
 	}
-	time.Sleep(time.Minute)
+	time.Sleep(time.Millisecond)
 }
