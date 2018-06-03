@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"os"
 
+	"Golearn-Practice/functional/fib"
 	"bufio"
-
-	"imooc.com/ccmouse/learngo/functional/fib"
 )
 
 func tryDefer() {
