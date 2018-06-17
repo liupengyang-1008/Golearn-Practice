@@ -23,3 +23,4 @@ func (node *Node) SetValue(value int) {
 func CreateNode(value int) *Node {
 	return &Node{Value: value}
 }
+

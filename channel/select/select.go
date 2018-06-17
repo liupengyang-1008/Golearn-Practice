@@ -12,7 +12,7 @@ func generator() chan int {
 		i := 0
 		for {
 			time.Sleep(
-				time.Duration(rand.Intn(1500)) *
+				time.Duration(rand.Intn(500)) *
 					time.Millisecond)
 			out <- i
 			i++
@@ -23,7 +23,7 @@ func generator() chan int {
 
 func worker(id int, c chan int) {
 	for n := range c {
-		time.Sleep(time.Second)
+		time.Sleep(200 * time.Millisecond)
 		fmt.Printf("Worker %d received %d\n",
 			id, n)
 	}
@@ -41,6 +41,7 @@ func main() {
 
 	var values []int
 	tm := time.After(10 * time.Second)
+	//定时器
 	tick := time.Tick(time.Second)
 	for {
 		var activeWorker chan<- int
@@ -57,10 +58,11 @@ func main() {
 			values = append(values, n)
 		case activeWorker <- activeValue:
 			values = values[1:]
-
+			//800毫秒没有收到数据打印timeout
 		case <-time.After(800 * time.Millisecond):
 			fmt.Println("timeout")
 		case <-tick:
+			//每隔1秒打印队列长度
 			fmt.Println(
 				"queue len =", len(values))
 		case <-tm:
