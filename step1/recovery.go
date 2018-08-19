@@ -1,4 +1,4 @@
-package main
+package step1
 
 import (
 	"fmt"
